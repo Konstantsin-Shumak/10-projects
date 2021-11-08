@@ -1,32 +1,29 @@
+const headerText = document.getElementById("selectedDay");
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
-const minsEl = document.getElementById("mins");
+const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 
-const newYears = "1 Jan 2021";
+const selectedDay = "1 Jan 2022";
 
-function countdown() {
-    const newYearsDate = new Date(newYears);
+headerText.innerText = selectedDay;
+
+const getTime = () => {
+    const selectedDatDate = new Date(selectedDay);
     const currentDate = new Date();
 
-    const totalSeconds = (newYearsDate - currentDate) / 1000;
-
+    const totalSeconds = (selectedDatDate - currentDate) / 1000;
     const days = Math.floor(totalSeconds / 3600 / 24);
     const hours = Math.floor(totalSeconds / 3600) % 24;
-    const mins = Math.floor(totalSeconds / 60) % 60;
+    const minutes = Math.floor(totalSeconds / 60) % 60;
     const seconds = Math.floor(totalSeconds) % 60;
 
-    daysEl.innerHTML = days;
-    hoursEl.innerHTML = formatTime(hours);
-    minsEl.innerHTML = formatTime(mins);
-    secondsEl.innerHTML = formatTime(seconds);
+    daysEl.innerText = formatTime(days);
+    hoursEl.innerText = formatTime(hours);
+    minutesEl.innerText = formatTime(minutes);
+    secondsEl.innerText = formatTime(seconds);
 }
 
-function formatTime(time) {
-    return time < 10 ? `0${time}` : time;
-}
+const formatTime = (time) => time < 10 ? (`0${time}`) : time;
 
-// initial call
-countdown();
-
-setInterval(countdown, 1000);
+setInterval(getTime, 1000);
