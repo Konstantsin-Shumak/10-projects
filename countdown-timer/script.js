@@ -1,10 +1,10 @@
-const headerText = document.getElementById("selectedDay");
+const headerText = document.getElementById("selected-day");
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
 const secondsEl = document.getElementById("seconds");
 
-const selectedDay = "1 Jan 2022";
+const selectedDay = "16 Aug 2022";
 
 headerText.innerText = selectedDay;
 

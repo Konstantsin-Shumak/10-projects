@@ -2,35 +2,42 @@
 
 * {
     box-sizing: border-box;
+    text-align: center;
+    color: #434a50;
 }
+
 body {
     min-height: 100vh;
     margin: 0;
     font-family: "Roboto", sans-serif;
-    color: #434a50;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-image: url("https://wallpaperaccess.com/full/686998.jpg");
-    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
 }
 
 h1 {
+    font-weight: normal;
     font-size: 4rem;
     margin-top: -3rem;
 }
 
-.daysContainer{
-    width: 100%;
+.countdown-container {
     display: flex;
-    justify-content: space-evenly;
-    font-weight: bold;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.bigText{
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
+.contdown-el span{
+    font-size: 1.5rem;
+}
+
+.big-text {
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 2rem;
 }
