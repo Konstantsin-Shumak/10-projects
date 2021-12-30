@@ -13,33 +13,22 @@
 <body>
     <div class="mobile-container">
         <header>
-            <input type="text" name="" id="">
+            <input type="text" id="search-term" />
             <button id="search"><i class="fas fa-search"></i></button>
         </header>
         <div class="fav-container">
             <h3>Favourite Meals</h3>
-            <ul class="fav-meals">
-                <li><img src="https://www.themealdb.com/images/media/meals/wrssvt1511556563.jpg" alt=""><span>Beef and
-                        Oyster pie</span></li>
-                <li><img src="https://www.themealdb.com/images/media/meals/uttupv1511815050.jpg" alt=""><span>Montreal
-                        Smoked Meat</span></li>
-                <li><img src="https://www.themealdb.com/images/media/meals/w8umt11583268117.jpg"
-                        alt=""><span>Shepherd</span></li>
-            </ul>
+            <ul class="fav-meals" id="fav-meals"></ul>
         </div>
-        <div class="meals">
-            <div class="meal">
-                <div class="meal-header">
-                    <span class="random">Random Recipe</span>
-                    <img src="https://www.themealdb.com/images/media/meals/4er7mj1598733193.jpg" alt="">
-                </div>
-                <div class="meal-body">
-                    <h4>Veggie Veggies</h4>
-                    <button class="fav-btn">
-                        <i class="far fa-heart"></i>
-                    </button>
-                </div>
-            </div>
+        <div class="meals" id="meals"></div>
+    </div>
+
+    <div id="meal-popup" class="popup-container hidden">
+        <div class="popup">
+            <button id="close-popup" class="close-popup">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="meal-info" id="meal-info"></div>
         </div>
     </div>
 </body>
